@@ -1,1 +1,430 @@
+* {
+    font-family: 'Architects Daughter', Verdana, Tahoma, sans-serif, cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+} 
+li{
+    list-style: none;
+}
+/*плавная прокрутка по якорям */
+html{
+    scroll-behavior:smooth;
+}
+/*фон на всю страницу*/
+    body {
+        
+        background: linear-gradient( rgb(68, 95, 247), transparent 1px), linear-gradient( 90deg, rgb(142, 171, 233), transparent 1px);
+        background-color: rgb(243, 228, 214);
+        background-size: 30px 30px;
+        background-position: center center;
+        font-size: 20px;
+        transition: all .5s ease;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    
+      .main-container{
+          margin: 0 auto;
+          margin-top: 150px;
+          max-width: 75%;
+      }
+      .me{
+          border: 20px solid white;
+          border-radius: 50%;
+          max-width: 100%;
+      }
+      h1{
+          font-size: 38px;
+          text-align: center;
 
+      }
+      /* Первый контейнер контакты и фото*/
+      .hello{
+          background: rgba(142, 171, 233, 0.5);
+          border: 10px solid grey;
+          padding: 20px;
+         
+      }
+      .intro{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 1400px;
+       max-width: 100%;
+       flex-wrap: wrap;
+      }
+      .intro-text{
+          max-width: 90%;
+          min-width: 0;
+          align-self: center;
+          margin: 10px;
+          text-align: center;
+      }
+     
+      
+      
+      h2{
+        font-size: 30px;
+        margin: 10px;
+    }
+    .lang-level{
+        margin: 10px;
+    }
+    
+      .contacts{
+          display: inline-flex;
+          list-style-type: none;
+          text-align: left;
+          line-height: 2;
+      }
+      li{
+          margin: 0 10px;
+      }
+
+/*второй контейнер с описанием*/
+      .c1-summary{
+        margin: 20px 0px;
+        padding: 20px;
+        background-color: rgba(140, 243, 155, 0.5);
+        border: 10px solid darkolivegreen;
+    }
+    .logo{
+        border: 5px solid green;
+        border-radius: 10%;
+        float: left;
+        margin: 10px;
+        max-width: 100%;
+    }
+    .html.logo{
+        float: right; 
+      }
+     /*третий контейнер с образованием*/
+      .c2-education{
+        background-color:rgba(157, 59, 182, 0.3);
+        border: 10px solid violet;
+        margin: 20px 0;
+        padding: 20px;
+    }
+.table{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+}
+    .tables{
+        padding: 10px;
+margin: 10px;
+        border-bottom: 1px solid rgb(100, 38, 97);
+    }
+    .first{
+        background-color: rgba(251, 248, 248, 0.5);
+    }
+      /*четвертый контейнер со скилами*/
+
+      .c3-skills{
+        background-color: rgba(202, 53, 53, 0.3);
+        border: 10px solid red;
+        padding: 20px;
+        margin: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+      }
+.logos{
+    max-width: 80%;
+    margin-top: 15px;
+
+}
+.skills-con{
+    text-align: center;
+    margin: 10px;
+}
+.lang-level{
+    margin-bottom: 40px;
+}
+.all-flags{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.flags{
+    
+    max-width: 90%;
+    margin: 5px;
+}
+
+      /*пятый контейнер с примерами кода*/
+           
+      .c4-code{
+        background-color: rgba(242, 239, 90, 0.5);
+        border: 10px solid yellow;
+        margin: 10px 0px;
+        padding: 20px;
+    }
+      .code-examples{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 1400px;
+       max-width: 100%;
+       flex-wrap: wrap;
+    }
+    
+    .example{
+        max-width: 100%;
+        min-width: 0;
+        margin: 30px;
+    }
+      .javascript{
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          white-space: pre-wrap;
+          word-break: break-all;
+      }
+      
+
+      /*шестой контейнер со ссылками на проекты*/
+
+      .c5-projects{
+          background-color: rgba(243, 163, 57, 0.5);
+          border: 10px solid orange;
+          padding: 20px;
+          margin: 20px 0;
+      }
+      .examp{
+        width: 90%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        
+    }
+      .my-projects{
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content:center;
+          text-align: center;
+      }
+
+      .project{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          border-top: 10px solid orange;
+          margin: 10px;
+      }
+.description{
+    padding: 15px;
+    background-color:lightyellow;
+}
+      h3{
+          margin: 10px;
+          font-size: 25px;
+      }
+
+/*Седьмой контейнер - видео презентация*/
+      .c6-video{
+        border: 10px solid rgba(103, 52, 145, 1);
+        background-color:rgba(68, 95, 247, 0.3);
+        padding: 20px;
+        margin: 20px 0;
+       
+    }
+    .video-center{
+       
+        max-width: 500px;
+        margin: auto;
+    }
+    .video{
+       display: block;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+.video iframe {
+position:absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-width: 0;
+outline-width: 0;
+
+
+}
+
+/*контейнер футер*/
+      .footer{
+          display: flex;
+          background-color: rgba(141, 146, 156, 0.5);
+          border: 10px solid grey;
+          justify-content: space-between;
+          margin: 20px 0;
+          padding: 20px;
+          flex-wrap: wrap;
+          
+      }
+      .footer-item{
+          text-align: center;
+          align-self: center;
+      }
+      
+
+       /*для того чтобы не расплылось все с уменьшением экрана */
+       
+       
+      @media (max-width: 700px) {
+         
+        .section {
+            flex-direction: column;
+        }
+    
+    
+    
+        .column--thin {
+            max-width: 100%;
+            padding-bottom: 0;
+        }
+    }
+    
+    @media (max-width: 500px) {
+        .main-wrapper {
+            padding: 0 1rem;
+        }
+    
+        section {
+            padding: 0 1rem;
+        }
+    
+        .list__items {
+            padding: 2rem 1rem;
+        }
+    
+        .column--left {
+            padding: 2rem 1rem;
+        }
+    
+        .column--thin {
+            padding: 2rem 1rem;
+            padding-bottom: 0;
+        }
+    
+        .column--wide {
+            padding: 2rem 1rem;
+        }
+        .section__title::before {
+            width: 0.5rem;
+            left: -1rem;
+        }
+        
+        .table{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+    
+    @media (max-width: 300px) {
+        .main-container {
+            padding: 0;
+        }
+    
+        section {
+            padding: 0;
+        }
+        .table{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+
+     
+     
+   /* бургер меню*/
+#menu__toggle {
+    opacity: 0;
+  }
+ .hamburger-menu{
+    position: fixed;
+ }
+  .menu__btn {
+      background-color:rgba(111, 175, 92, 0.6);
+      border: 3px solid green;
+    display: flex; 
+    align-items: center; 
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 1;
+    
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 450px;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgb(164, 212, 150);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Architects Daughter', Verdana, Tahoma, sans-serif, cursive;;
+    font-size: 20px;
+    font-weight: 60px;
+    text-decoration: none;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
