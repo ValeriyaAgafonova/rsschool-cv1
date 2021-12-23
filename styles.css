@@ -11,6 +11,18 @@
 html{
     scroll-behavior:smooth;
 }
+.navigation{
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.navigation li{
+    list-style: none;
+}
+
 /*фон на всю страницу*/
     body {
         background-color: rgb(0, 0, 0);
@@ -114,7 +126,7 @@ html{
     .tables{
         padding: 10px;
 margin: 10px;
-        border-bottom: 1px solid rgb(100, 38, 97);
+        border-bottom: 1px solid rgb(126, 158, 184);
     }
     .first{
         background-color: rgba(251, 248, 248, 0.5);
@@ -189,10 +201,9 @@ margin: 10px;
       }
 
       .project{
-          max-width: 40%;
+          width: 40%;
           display: flex;
           flex-direction: column;
-          
           margin: 10px;
       }
 .description{
@@ -252,17 +263,113 @@ outline-width: 0;
           align-self: center;
        
       }
-      
+        /* бургер меню*/
+#menu__toggle {
+    opacity: 0;
+  }
+ .hamburger-menu{
+    position: fixed;
+ }
+  .menu__btn {
+      background-color:rgba(92, 121, 175, 0.6);
+      border: 3px solid rgb(0, 55, 128);
+    display: none; 
+    align-items: center; 
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 1;
+    
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 450px;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgb(25, 56, 95);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: rgb(114, 142, 196);
+    font-family: 'Architects Daughter', Verdana, Tahoma, sans-serif, cursive;;
+    font-size: 20px;
+    font-weight: 60px;
+    text-decoration: none;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+
 
        /*для того чтобы не расплылось все с уменьшением экрана */
-       
+       @media (max-width: 880px) {
+        .menu__btn{
+            display: flex;
+        }
+        .navigation{
+            display: none;
+        }
+       }
        
       @media (max-width: 700px) {
-         
+       
         .section {
             flex-direction: column;
         }
-    
+        .my-projects{
+            flex-direction: column;
+         }
+         .project{
+             width: 90%;
+         }
     
     
         .column--thin {
@@ -275,7 +382,7 @@ outline-width: 0;
         .main-wrapper {
             padding: 0 1rem;
         }
-    
+        
         section {
             padding: 0 1rem;
         }
@@ -325,87 +432,4 @@ outline-width: 0;
 
      
      
-   /* бургер меню*/
-#menu__toggle {
-    opacity: 0;
-  }
- .hamburger-menu{
-    position: fixed;
- }
-  .menu__btn {
-      background-color:rgba(111, 175, 92, 0.6);
-      border: 3px solid green;
-    display: flex; 
-    align-items: center; 
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    z-index: 1;
-    
-  }
-  
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background-color: white;
-  }
-  .menu__btn > span::before {
-    content: '';
-    top: -8px;
-  }
-  .menu__btn > span::after {
-    content: '';
-    top: 8px;
-  }
-
-  .menu__box {
-    display: block;
-    position: fixed;
-    visibility: visible;
-    top: 0;
-    left: -100%;
-    width: 200px;
-    height: 450px;
-    margin: 0;
-    padding: 80px 0;
-    list-style: none;
-    text-align: center;
-    background-color: rgb(164, 212, 150);
-    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-  }
-
-  .menu__item {
-    display: block;
-    padding: 12px 24px;
-    color: #333;
-    font-family: 'Architects Daughter', Verdana, Tahoma, sans-serif, cursive;;
-    font-size: 20px;
-    font-weight: 60px;
-    text-decoration: none;
-  }
-  .menu__item:hover {
-    background-color: #CFD8DC;
-  }
-
-  #menu__toggle:checked ~ .menu__btn > span {
-    transform: rotate(45deg);
-  }
-  #menu__toggle:checked ~ .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0);
-  }
-  #menu__toggle:checked ~ .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .menu__box {
-    visibility: visible;
-    left: 0;
-  }
+ 
