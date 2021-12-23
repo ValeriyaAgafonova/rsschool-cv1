@@ -3,20 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
   
 } 
-li{
-    list-style: none;
-}
+
 /*плавная прокрутка по якорям */
 html{
     scroll-behavior:smooth;
 }
 /*фон на всю страницу*/
     body {
-        
-        background: linear-gradient( rgb(68, 95, 247), transparent 1px), linear-gradient( 90deg, rgb(142, 171, 233), transparent 1px);
-        background-color: rgb(243, 228, 214);
+        background-color: rgb(0, 0, 0);
         background-size: 30px 30px;
         background-position: center center;
         font-size: 20px;
@@ -31,10 +28,12 @@ html{
           margin: 0 auto;
           margin-top: 150px;
           max-width: 75%;
+          background: rgb(48, 57, 74);
+          box-shadow: 0 0 50px rgba(184, 182, 182, 0.5);
       }
       .me{
-          border: 20px solid white;
           border-radius: 50%;
+        box-shadow: 0 0 50px rgba(184, 182, 182, 0.5);
           max-width: 100%;
       }
       h1{
@@ -44,11 +43,9 @@ html{
       }
       /* Первый контейнер контакты и фото*/
       .hello{
-          background: rgba(142, 171, 233, 0.5);
-          border: 10px solid grey;
           padding: 20px;
-         
       }
+
       .intro{
         display: flex;
         justify-content: center;
@@ -70,6 +67,8 @@ html{
       h2{
         font-size: 30px;
         margin: 10px;
+        padding: 10px;
+        background-color: rgba(106, 134, 211, 0.639);
     }
     .lang-level{
         margin: 10px;
@@ -87,13 +86,12 @@ html{
 
 /*второй контейнер с описанием*/
       .c1-summary{
+  
         margin: 20px 0px;
         padding: 20px;
-        background-color: rgba(140, 243, 155, 0.5);
-        border: 10px solid darkolivegreen;
     }
     .logo{
-        border: 5px solid green;
+        box-shadow: 0 0 50px rgba(184, 182, 182, 0.5);
         border-radius: 10%;
         float: left;
         margin: 10px;
@@ -104,8 +102,7 @@ html{
       }
      /*третий контейнер с образованием*/
       .c2-education{
-        background-color:rgba(157, 59, 182, 0.3);
-        border: 10px solid violet;
+
         margin: 20px 0;
         padding: 20px;
     }
@@ -125,42 +122,26 @@ margin: 10px;
       /*четвертый контейнер со скилами*/
 
       .c3-skills{
-        background-color: rgba(202, 53, 53, 0.3);
-        border: 10px solid red;
+     
         padding: 20px;
         margin: 20px 0;
         display: flex;
         flex-wrap: wrap;
         justify-content:space-around;
       }
-.logos{
-    max-width: 80%;
-    margin-top: 15px;
 
-}
 .skills-con{
-    text-align: center;
     margin: 10px;
 }
 .lang-level{
     margin-bottom: 40px;
 }
-.all-flags{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-}
-.flags{
-    
-    max-width: 90%;
-    margin: 5px;
-}
+
 
       /*пятый контейнер с примерами кода*/
            
       .c4-code{
-        background-color: rgba(242, 239, 90, 0.5);
-        border: 10px solid yellow;
+      
         margin: 10px 0px;
         padding: 20px;
     }
@@ -188,13 +169,13 @@ margin: 10px;
       /*шестой контейнер со ссылками на проекты*/
 
       .c5-projects{
-          background-color: rgba(243, 163, 57, 0.5);
-          border: 10px solid orange;
+       
           padding: 20px;
           margin: 20px 0;
+       
       }
       .examp{
-        width: 90%;
+        width: 100%;
         margin-top: 30px;
         margin-bottom: 30px;
         
@@ -202,21 +183,22 @@ margin: 10px;
       .my-projects{
           margin-top: 15px;
           display: flex;
-          flex-direction: column;
-          justify-content:center;
+          flex-wrap: wrap;
+          justify-content:space-around;
           text-align: center;
       }
 
       .project{
+          max-width: 40%;
           display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          border-top: 10px solid orange;
+          flex-direction: column;
+          
           margin: 10px;
       }
 .description{
     padding: 15px;
-    background-color:lightyellow;
+    background-color:rgb(51, 58, 116);
+    max-width: 100%;
 }
       h3{
           margin: 10px;
@@ -225,8 +207,7 @@ margin: 10px;
 
 /*Седьмой контейнер - видео презентация*/
       .c6-video{
-        border: 10px solid rgba(103, 52, 145, 1);
-        background-color:rgba(68, 95, 247, 0.3);
+
         padding: 20px;
         margin: 20px 0;
        
@@ -259,8 +240,7 @@ outline-width: 0;
 /*контейнер футер*/
       .footer{
           display: flex;
-          background-color: rgba(141, 146, 156, 0.5);
-          border: 10px solid grey;
+         border-top: 2px solid white;
           justify-content: space-between;
           margin: 20px 0;
           padding: 20px;
@@ -270,6 +250,7 @@ outline-width: 0;
       .footer-item{
           text-align: center;
           align-self: center;
+       
       }
       
 
